@@ -1,0 +1,254 @@
+:root {
+  --font-family1: "Playfair Display", serif;
+  --font-family2: "Inter", sans-serif;
+  --letter-spacing-1: 2px;
+  --letter-spacing-2: 1.6px;
+  --font-size-title: 2.55em;
+  --line-height: 2;
+  --line-circle-color: #7a8b31;
+
+  --button-color: #a1b83d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: var(--font-family2);
+  color: #e8e8ea;
+  font-size: 2.5em;
+  padding-bottom: 1.25em;
+}
+
+/*----------------HERO SECTION------------------------*/
+
+#hero {
+  background-image: url("images/1.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+}
+
+ul {
+  list-style-type: none;
+  padding: 2rem;
+  display: flex;
+}
+
+a {
+  padding: 1rem;
+  text-decoration: none;
+  font-family: var(--font-family1);
+  letter-spacing: var(--letter-spacing-1);
+  font-size: 19px;
+  color: white;
+}
+
+#hero div {
+  position: relative;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--font-family1);
+  font-size: var(--font-size-title);
+  letter-spacing: var(--letter-spacing-1);
+  color: white;
+  text-align: center;
+}
+
+button {
+  font-family: var(--font-family2);
+  font-size: 1.24em;
+  margin-top: 1.56em;
+  text-transform: uppercase;
+  background-color: var(--button-color);
+  border-radius: 1.8em;
+  border: none;
+  letter-spacing: var(--letter-spacing-2);
+  padding: 0.93em 1.875em;
+}
+
+/*----------------ABOUT ME SECTION------------------------*/
+#about {
+  background-color: #4a4c47;
+  display: flex;
+  height: auto;
+}
+
+#photo-id img {
+  max-width: 70%;
+  border-radius: 100%;
+}
+
+#photo-id {
+  padding: 80px 0px 80px 80px;
+}
+
+.green-line {
+  height: 5px;
+  background-color: var(--line-circle-color);
+}
+
+#description {
+  padding: 80px 100px 80px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#description p {
+  font-family: var(--font-family2);
+  color: #afafae;
+  letter-spacing: var(--letter-spacing-2);
+  line-height: var(--line-height);
+  text-align: justify;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  background-color: #737373;
+}
+
+.level {
+  background-color: #afafae;
+  height: 10px;
+  border-radius: 5px;
+}
+
+#skills h3 {
+  text-transform: uppercase;
+}
+
+/*--------------------------Portfolio----------------------------------*/
+#portfolio {
+  padding: 20px;
+  background-color: #4a4c47;
+  height: 100vh;
+}
+
+#projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  padding: 50px;
+}
+
+.image-container {
+  max-height: 400px;
+  max-width: 500px;
+}
+
+.image-container img {
+  width: 80%;
+  max-height: 100%;
+  border-radius: 50px;
+}
+
+/*---------------------CONTACT----------------------------------------*/
+#contact {
+  background-color: #afafae;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#contact-container {
+  line-height: 2;
+  letter-spacing: var(--letter-spacing-2);
+}
+
+/*------------RESPONSIVE--------------*/
+@media (max-width: 769px) {
+  /*HERO SECTION*/
+
+  #hero {
+    height: 100vh;
+  }
+
+  #hero nav {
+    justify-content: center;
+  }
+
+  #hero nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero nav ul a {
+    font-size: 1rem;
+  }
+
+  #hero div {
+    top: 3;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.5em;
+    margin-top: 1em;
+    border-radius: 1.2em;
+  }
+
+  /*ABOUT ME SECTION*/
+  #about {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  #photo-id img {
+    max-width: 50%;
+  }
+
+  #photo-id {
+    padding: 0;
+    text-align: center;
+  }
+
+  #description {
+    padding: 40px 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #skills {
+    width: 100%;
+  }
+
+  .level {
+    background-color: #afafae;
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  #skills h3 {
+    text-transform: uppercase;
+  }
+
+  /*PORTFOLIO SECTION*/
+  #portfolio {
+    height: auto;
+  }
+}
